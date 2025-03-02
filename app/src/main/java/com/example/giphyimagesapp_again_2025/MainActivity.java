@@ -38,11 +38,6 @@ public class MainActivity extends AppCompatActivity {
 
     private SearchView searchView;
 
-    private int currentPage = 1; // Start with page 1
-    private boolean isLoading = false; // Prevent multiple loads at the same time
-    private int totalPages = 10; // Set this based on the total available pages (you can adjust this logic)
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
