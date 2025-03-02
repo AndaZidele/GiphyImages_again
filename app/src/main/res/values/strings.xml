@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">GiphyImagesApp_again_2025</string>
+    <string name="api_key">wMB108GDg4pV8N5YcCJd8hd8Sg8HPQSf</string>
+    <string name="imageApi">https://giphy.com/gifs/</string>
+</resources>

@@ -1,0 +1,105 @@
+plugins {
+    alias(libs.plugins.androidApplication)
+}
+
+android {
+    namespace 'com.example.giphyimagesapp_again_2025'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.example.giphyimagesapp_again_2025"
+        minSdk 28
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    buildFeatures{
+        dataBinding = true
+    }
+}
+
+dependencies {
+
+    // Retrofit
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+    implementation("com.google.code.gson:gson:2.9.0")
+    implementation 'com.squareup.retrofit2:adapter-rxjava3:2.9.0'
+
+    //Picasso
+    implementation 'com.squareup.picasso:picasso:2.71828'
+
+    // Glide
+    implementation("com.github.bumptech.glide:glide:4.16.0")
+    implementation libs.car.ui.lib
+    //  implementation libs.lifecycle.viewmodel.android
+    //  implementation libs.androidx.lifecycle.viewmodel.android
+    annotationProcessor("com.github.bumptech.glide:compiler:4.16.0")
+
+    //Lifecycle Extensions
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel:2.2.0'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0'
+    // LifeCycle:
+//    implementation("androidx.lifecycle:lifecycle-viewmodel:2.5.0")
+//    implementation("androidx.lifecycle:lifecycle-extensions:2.2.0")
+//
+//
+//    // Live Data:
+   // implementation("androidx.lifecycle:lifecycle-livedata:2.8.2")
+
+    //solving duplicate errors:
+    implementation(platform("org.jetbrains.kotlin:kotlin-bom:1.8.0"))
+
+
+    implementation libs.appcompat
+    implementation libs.material
+    implementation libs.activity
+    implementation libs.constraintlayout
+    testImplementation libs.junit
+    androidTestImplementation libs.ext.junit
+    androidTestImplementation libs.espresso.core
+
+    //Room and RxJava Support
+    implementation 'androidx.room:room-runtime:2.6.1'
+    implementation 'androidx.room:room-rxjava2:2.6.1'
+    annotationProcessor 'androidx.room:room-compiler:2.6.1'
+    //RxJava
+    implementation 'io.reactivex.rxjava2:rxandroid:2.0.1'
+
+    //Scalable Size Units
+    implementation 'com.intuit.sdp:sdp-android:1.0.6'
+    implementation 'com.intuit.ssp:ssp-android:1.0.6'
+    //Rounded Image View
+    implementation 'com.makeramen:roundedimageview:2.3.0'
+
+    //SwipeRefreshLayout
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.2.0-alpha01'
+    // for Image Binding Glide library
+    implementation 'com.github.bumptech.glide:glide:4.16.0'
+    annotationProcessor("com.github.bumptech.glide:compiler:4.16.0")
+
+    implementation 'org.jetbrains.kotlin:kotlin-bom:1.8.0'
+
+    // For pagination
+    implementation 'androidx.paging:paging-runtime:3.3.6'
+    implementation 'androidx.paging:paging-rxjava3:3.3.6'
+
+    // Hilt Dagger
+    implementation 'com.google.dagger:hilt-android:2.41'
+    annotationProcessor 'com.google.dagger:hilt-compiler:2.41'
+}
